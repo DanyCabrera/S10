@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Café Aurora — Pedidos</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Cafetería</p>
+        <h1>Café Aurora</h1>
+      </div>
+      <p class="tagline">Consulta el menú, arma tu pedido y confírmalo.</p>
+    </header>
+
+    <div
+      id="status-region"
+      class="status-region"
+      data-cy="status-region"
+      aria-live="polite"
+    ></div>
+
+    <main class="layout" data-cy="catalog-view">
+      <section aria-labelledby="productos-titulo">
+        <h2 id="productos-titulo">Productos</h2>
+        <ul id="product-list" class="product-list" data-cy="product-list"></ul>
+      </section>
+
+      <aside class="cart-panel" aria-labelledby="pedido-titulo">
+        <h2 id="pedido-titulo">Pedido en curso</h2>
+        <ul id="cart-list" class="cart-list" data-cy="cart-list"></ul>
+        <p class="empty-cart" data-cy="empty-cart">Aún no hay artículos en el pedido.</p>
+
+        <div class="cart-summary">
+          <p>
+            Total:
+            <strong data-cy="cart-total" id="cart-total">$0.00</strong>
+          </p>
+          <button type="button" class="primary" data-cy="confirm-order" id="confirm-order">
+            Confirmar pedido
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <section
+      class="success-view"
+      data-cy="order-success"
+      hidden
+      aria-labelledby="exito-titulo"
+    >
+      <p class="eyebrow">Pedido confirmado</p>
+      <h2 id="exito-titulo">Tu orden está lista</h2>
+      <p>
+        Identificador:
+        <strong data-cy="order-id" id="order-id"></strong>
+      </p>
+      <p>
+        Total persistido:
+        <strong data-cy="order-total" id="order-total"></strong>
+      </p>
+      <button type="button" class="primary" data-cy="new-order" id="new-order">
+        Nuevo pedido
+      </button>
+    </section>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "cafeteria-pedidos",
+  "version": "1.0.0",
+  "description": "Sistema de pedidos de cafetería: frontend, API, persistencia y pruebas Cypress E2E",
+  "private": true,
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cypress:run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "start-server-and-test": "^2.0.13",
+    "typescript": "^5.8.3"
+  }
+}

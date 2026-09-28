@@ -1,0 +1,11 @@
+node_modules/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+server/data/db.json
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/*
+!.vscode/settings.json
